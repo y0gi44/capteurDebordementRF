@@ -1,5 +1,5 @@
 #include "Arduino.h"
-/*Utilisation de la librairie LowPower https://github.com/rocketscream/Low-Power
+/* Utilisation de la librairie LowPower https://github.com/rocketscream/Low-Power
  *
  *
  * Custom sensor (base code)
