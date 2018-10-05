@@ -28,3 +28,27 @@ Présentation
 ![emetteur](./docs/images/RF433.jpg)
 ![coupleur de piles ](./docs/images/coupleur_piles.jpg)
 
+
+
+Principe de fonctionnement
+--------------------------
+
+La détection se fait de manière très simple, on utilise une entrée digitale en mode INPUT_PULLUP.
+Quand de l'eau entre en contact entre la broche d'entrée digitale et la broche de masse, l'état de la pin digitale passe de 1 à 0.
+Afin de detecter de façon fiable l'eau d'un éventuel débordement, la distance entre les broches est volontairement faible.
+Une plaque de bakélite a été utilisée et des broches on été soudées entre autre aux extrémités de la platine afin de faire une base stable au montage.
+
+
+Le but étant que le capteur doit être économe en énergie, le programme utilise la fonction de deep sleep de l'arduino.
+Autre point d'économie d'énergie, le capteur allume le transmetteur sans fil uniquement dans les 2 cas suivants :
+
+- Cas 1 : 5 minutes se sont écoulées depuis la dernière notification
+- Cas 2 : le capteur a détecté une innondation.
+
+
+![Capteur vue de dessus](./docs/images/capteur_dessus.png)
+![Capteur vue des broches](./docs/images/capteur_broches.png)
+![Capteur vue de dessous](./docs/images/capteur_dessous.png)
+
+
+
